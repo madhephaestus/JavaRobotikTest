@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 
-public class JavaIk {
+public class JavaRobotFk {
 	public static double x,y,theta=0;
 	public static double lastEncoder0,lastEncoder1,lastIMUHeading=0;
 	public static double lastTimestamp=-1;
@@ -41,7 +41,7 @@ public class JavaIk {
 			double deltaEncoder1 =encoder1-lastEncoder1;
 			double deltaIMU =IMUheading- lastIMUHeading;
 			
-			// do the IK update
+			// do the FK update
 		}// else store the last position data for next loop
 		lastEncoder0=encoder0;
 		lastEncoder1=encoder1;
