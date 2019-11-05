@@ -16,7 +16,7 @@ public class JavaRobotFk {
 			reader = new BufferedReader(new FileReader(filename));
 			String line = reader.readLine();
 			while (line != null) {
-				System.out.println(line);
+				//System.out.println(line);
 				// read next line
 				line = reader.readLine();
 				if(line!=null) {
@@ -43,7 +43,8 @@ public class JavaRobotFk {
 			double deltaEncoder0 =encoder0-lastEncoder0;
 			double deltaEncoder1 =encoder1-lastEncoder1;
 			double deltaIMU =IMUheading- lastIMUHeading;
-			System.out.println("Delta Time="+deltaTime+" enc0="+deltaEncoder0+" enc1="+deltaEncoder1+" heading="+deltaIMU);
+			if(Math.abs(deltaEncoder1)>0&&Math.abs(deltaEncoder0)>0)
+				System.out.println("Delta Time="+deltaTime+" enc0="+deltaEncoder0+" enc1="+deltaEncoder1+" heading="+deltaIMU);
 			// do the FK update
 		}// else store the last position data for next loop
 		lastEncoder0=encoder0;
