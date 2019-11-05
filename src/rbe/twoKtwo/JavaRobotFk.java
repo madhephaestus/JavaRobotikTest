@@ -43,7 +43,7 @@ public class JavaRobotFk {
 			double deltaEncoder0 =encoder0-lastEncoder0;
 			double deltaEncoder1 =encoder1-lastEncoder1;
 			double deltaIMU =IMUheading- lastIMUHeading;
-			
+			System.out.println("Delta Time="+deltaTime+" enc0="+deltaEncoder0+" enc1="+deltaEncoder1+" heading="+deltaIMU);
 			// do the FK update
 		}// else store the last position data for next loop
 		lastEncoder0=encoder0;
