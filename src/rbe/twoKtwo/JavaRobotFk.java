@@ -22,10 +22,10 @@ public class JavaRobotFk {
 				if(line!=null) {
 					String[] fields = line.split(",");
 					double [] parsed= new double[fields.length];
-					for(int i=0;i<parsed.length;i++)
+					for(int i=0;i<17;i++)
 						try {
 							parsed[i]= Double.parseDouble(fields[i]);
-						}catch(NumberFormatException ex) {}
+						}catch(Exception ex) {}
 					if(parsed.length==17)
 						alldata.add(parsed);	
 				}
