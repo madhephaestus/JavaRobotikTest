@@ -19,13 +19,16 @@ public class JavaRobotFk {
 				System.out.println(line);
 				// read next line
 				line = reader.readLine();
-				String[] fields = line.split(",");
-				double [] parsed= new double[fields.length];
-				for(int i=0;i<parsed.length;i++)
-					try {
-						parsed[i]= Double.parseDouble(fields[i]);
-					}catch(NumberFormatException ex) {}
-				alldata.add(parsed);	
+				if(line!=null) {
+					String[] fields = line.split(",");
+					double [] parsed= new double[fields.length];
+					for(int i=0;i<parsed.length;i++)
+						try {
+							parsed[i]= Double.parseDouble(fields[i]);
+						}catch(NumberFormatException ex) {}
+					if(parsed.length==17)
+						alldata.add(parsed);	
+				}
 			}
 			reader.close();
 		} catch (Exception e) {
